@@ -1,11 +1,13 @@
 package com.inttao.apps.vaadin.components.vtable;
 
 import com.vaadin.flow.component.UI;
+import com.vaadin.flow.component.dependency.JavaScript;
 import com.vaadin.flow.component.dependency.JsModule;
 import com.vaadin.flow.component.html.Div;
 
 import java.util.UUID;
-@JsModule("./vtable.min.js")
+//@JsModule("./vtable.min.js")
+//@JavaScript("./vtable.min.js")
 public class PivotTable extends Div {
     private String elementId;
     private String data = "[]";
@@ -13,7 +15,7 @@ public class PivotTable extends Div {
         UUID uuid = UUID.randomUUID();
         this.elementId = uuid.toString();
         setId(elementId);
-        UI.getCurrent().getPage().addJavaScript("./vtable.min.js");
+        UI.getCurrent().getPage().addJavaScript("./frontend/vtable.min.js");
         setMinHeight("400px");
         setMinWidth("600px");
     }
