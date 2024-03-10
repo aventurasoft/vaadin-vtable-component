@@ -187,6 +187,9 @@ public class PivotTable extends Div {
         this.indicators = indicators;
     }
 
+    private void setIndicator(Indicator indicator) {
+
+    }
     public Boolean getEnableDataAnalysis() {
         return enableDataAnalysis;
     }
@@ -258,4 +261,8 @@ public class PivotTable extends Div {
     public void setWithMode(String withMode) {
         this.withMode = withMode;
     }
+
+
+    public record Indicator(String indicatorKey, String title, String width, Boolean showSort
+            , String headerStyle, String format, String style){};
 }
