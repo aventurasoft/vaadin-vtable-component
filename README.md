@@ -11,7 +11,7 @@ Para poder acceder a los artefactos de la plataforma es necesario generar la lla
     <servers>
         ...
         <server>
-            <id>github</id>
+            <id>vtable-repo</id>
             <username>**reemplazar_usuario**</username>
             <password>**llave_generada**</password>
         </server>
@@ -26,7 +26,7 @@ El repositorio de la librería se encuentra en el siguiente enlace:
 
 ```xml
     <repository>
-        <id>github</id>
+        <id>vtable-repo</id>
         <url>https://maven.pkg.github.com/aventurasoft/vaadin-vtable-component</url>
     </repository>
 ```
