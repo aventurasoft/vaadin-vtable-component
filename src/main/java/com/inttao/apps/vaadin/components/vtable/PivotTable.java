@@ -1,7 +1,6 @@
 package com.inttao.apps.vaadin.components.vtable;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
+import tools.jackson.databind.ObjectMapper;
 import com.vaadin.flow.component.UI;
 import com.vaadin.flow.component.html.Div;
 
@@ -90,8 +89,6 @@ public class PivotTable extends Div {
 }
 
     public String generateOptions() {
-        try {
-
 
             String columnsStr = objectMapper.writeValueAsString(columns);
             String rowsStr = objectMapper.writeValueAsString(rows);
@@ -146,9 +143,6 @@ public class PivotTable extends Div {
             options += ", rowHierarchyIndent: 20 ";
             options += "}; ";
             return options;
-        } catch (JsonProcessingException ex) {
-            throw  new RuntimeException(ex);
-        }
     }
     public void setupTable() {
 
