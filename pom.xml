@@ -7,7 +7,9 @@
     <groupId>com.inttao.apps.vaadin.components.vtable</groupId>
     <artifactId>pivot-table-component</artifactId>
     <name>pivot-table</name>
-    <version>3.0.1</version>
+    <!-- 3.0.1 is burned: a pre-fix build with the baked-in flow-build-info.json was already
+         published to GitHub Packages on 2026-06-17 and package versions are immutable. -->
+    <version>3.0.2</version>
 
 
     <properties>
