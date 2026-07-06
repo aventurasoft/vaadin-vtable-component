@@ -7,7 +7,7 @@
     <groupId>com.inttao.apps.vaadin.components.vtable</groupId>
     <artifactId>pivot-table-component</artifactId>
     <name>pivot-table</name>
-    <version>3.0.0</version>
+    <version>3.0.1</version>
 
 
     <properties>
@@ -127,6 +127,16 @@
             <plugin>
                 <artifactId>maven-jar-plugin</artifactId>
                 <version>3.0.2</version>
+                <configuration>
+                    <excludes>
+                        <!-- Build artifacts of the demo/dev application, not add-on content.
+                             flow-build-info.json in particular carries this machine's absolute
+                             paths and productionMode:false; consuming apps pick it up from the
+                             classpath and their dev mode fails with "no access to folder ...". -->
+                        <exclude>META-INF/VAADIN/**</exclude>
+                        <exclude>vaadin-i18n/**</exclude>
+                    </excludes>
+                </configuration>
             </plugin>
             <plugin>
                 <artifactId>maven-install-plugin</artifactId>
